@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.0.min.js"></script>
+</head>
+
+<body>
+	<button id="clicker">click me</button>
+</body>
+<script>
+	$(function () {
+		$("#clicker").click(buttonClicked);
+
+		function buttonClicked() {
+			$("body").append("<p>Button was clicked!<p>");
+		}
+	});
+
+</script>
+
+<script>
+
+	let num1 = 2;
+	let num2 = 5;
+
+	function f_b() {
+		for (let i = 1; i < 101; i++) {
+			if (i % num1 === 0 && i % num2 === 0) {
+				console.log(i, "fizz_buzz")
+			} else if (i % num1 === 0) {
+				console.log(i, "fizz")
+			} else if (i % num2 === 0) {
+				console.log(i, "buzz")
+			} else {
+				console.log(i)
+			}
+		}
+	}
+
+	f_b();
+
+</script>
+
+
+</html>
